@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web_gui:
+    restart: always
+    hostname: web_gui
+    image: httpd:latest
+    ports:
+      - 8080:80
+    volumes:
+      - ${PWD}/html:/usr/local/apache2/htdocs
