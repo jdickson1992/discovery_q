@@ -12,7 +12,7 @@ function connect() {
             // called upon successful WebSocket connection
                 document.getElementById("connectionStatus").innerHTML = " Connected";
                 document.getElementById("connectionStatus").style.color = "magenta";
-            ws.send("loadPage[]");
+            ws.send(".master.loadPage[]");
             };
 
         ws.onmessage = function(e) {
@@ -83,7 +83,7 @@ function filterSyms() {
     };
     t = t.join("`");
     /*call the filterSyms function over the WebSocket*/
-    ws.send('filterSyms[`'+ t +']');
+    ws.send('.master.filterSyms[`'+ t +']');
 }
 
 function setSyms(data) {

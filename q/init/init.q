@@ -19,7 +19,7 @@ $[`discovery ~ args`service;
    .log.info["Overriding event handlers for master process"];
    .z.po:.master.po;
    .z.pc:.master.pc;
-   .cron.add[`funcName`inputs`nextRun`interval`repeat!(`.master.run;`;.z.P+00:00:01;5;1b)];
+   .cron.add[`funcName`inputs`nextRun`interval`repeat!(`.master.run;`;.z.P+00:00:01;2;1b)];
    .cron.on[]
   ];
    /.log.info["Overriding event handlers for client process"];

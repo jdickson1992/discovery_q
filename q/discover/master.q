@@ -67,12 +67,12 @@ subs:2!flip `handle`func`params!"is*"$\:();
 / populates webpage with discovery table immediately
 loadPage:{ 
   getSyms[.z.w]; 
-  sub[`getDiscovery;enlist `]
+  sub[`.master.getDiscovery;enlist `]
  };
 
 / updates subs table with a distinct list of syms/process
 filterSyms:{ 
-  sub[`getDiscovery;x]
+  sub[`.master.getDiscovery;x]
  };
 
 / webpage calls this over ws to get distinct processes running in the domain
