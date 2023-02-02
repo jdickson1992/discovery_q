@@ -18,6 +18,7 @@ po:{
 pc:{
   if[not[null inactive] and count inactive:first exec process from .master.discovery where handle=x;
      update handle:0Ni, active:0b from `.master.discovery where process=inactive];
+     .log.info["Deleting handle from clients table"];
      delete from `.master.clients where h=x
  };
 
@@ -53,6 +54,12 @@ checkHb:{[x]
        update warning:1b from `.master.discovery where process=proc
     ]
   ]
+ };
+
+/ Clears out the tracking tables 
+archive:{
+  delete from `.master.discovery where null handle;
+  delete from `.master.clients where proc=`undef
  };
 
 / ================================ WEBSOCKETS =================================== /
