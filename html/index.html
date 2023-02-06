@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-   <title>WebSocket PubSub Example</title>
+   <title>Discovery service</title>
 </head>
 <font face = "courier,monaco">
 <div>
@@ -14,7 +14,7 @@
 <h2 style="color:blue"> Discovery-Service </h2>
 <h5>Every q process loads in a discovery library which asynchronously publishes heartbeats to a discovery-service</h5>
 <h5 style="color:green"> GOOD: Receiving regular heartbeats</h4>
-<h5 style="color:Orange"> WARNING: Last heartbeat was 30-90s ago. Port busy?</h4>
+<h5 style="color:Orange"> WARNING: Last heartbeat was 30-90s ago. Port busy with long processing?</h4>
 <h5 style="color:Red"> ERROR: Last heartbeat was 90s+ ago. Port dead? </h4>
 <body onload="connect();">
    <!-- Create a section to filter on syms -->

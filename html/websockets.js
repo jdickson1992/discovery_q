@@ -71,7 +71,6 @@ function highlightError(){
     }
 }
 
-
 function filterSyms() {
     /* get the values of checkboxes that are ticked and
     convert into an array of strings */
@@ -95,7 +94,7 @@ function setSyms(data) {
     };
 }
 
-function setDiscovery(data) { discovery.innerHTML = generateTableHTML(data); highlightDiscovery(); highlightWarning(); highlightError() }
+function setDiscovery(data) { discovery.innerHTML = generateTableHTML(data); highlightDiscovery(); highlightWarning(); highlightError(); }
 
 function generateTableHTML(data){
     /* we will iterate through the object wrapping it in the HTML table tags */
