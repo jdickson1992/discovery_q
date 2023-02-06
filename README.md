@@ -17,8 +17,7 @@ To get started, just run:
 
 For e.g.:
 
-<img width="1997" alt="Screenshot 2023-02-06 at 17 12 41" src="https://user-images.githubusercontent.com/47530786/217038728-68064b74-7321-4ddb-ace0-052e5260dd9c.png">
-
+<img width="1305" alt="Screenshot 2023-02-06 at 17 44 54" src="https://user-images.githubusercontent.com/47530786/217046035-20783f57-ff76-4873-b5bc-8dbec9c9fb41.png">
 
 
 ---
@@ -46,7 +45,7 @@ For e.g.
 <img width="1599" alt="Screenshot 2023-02-06 at 17 11 36" src="https://user-images.githubusercontent.com/47530786/217038398-73c292ba-9a68-48a6-a2b8-139f6bad9fca.png">
 
 
-
+---
 
 
 # Dashboard 📊
