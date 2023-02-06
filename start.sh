@@ -7,7 +7,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No color
 
 # Start the port number at 8000
-PORT=8000
+PORT=9090
 
 # Define the directory to check
 DIR_NAME="q"
@@ -54,7 +54,7 @@ for SERVICE in "${array[@]}"
 do
   if [ "$SERVICE" == "discovery" ]; then
     echo -e "${YELLOW}Starting the service ${GREEN}$SERVICE${YELLOW} as a background kdb+ process${NC}"
-    nohup rlwrap q -service $SERVICE -heartbeat 0 </dev/null > ${LOG_DIR}/${SERVICE}.log 2>&1 &
+    nohup rlwrap q init/init.q -service $SERVICE -heartbeat 0 </dev/null > ${LOG_DIR}/${SERVICE}.log 2>&1 &
   else
     echo -e "${YELLOW}Starting the service ${GREEN}$SERVICE${YELLOW} as a background kdb+ process${NC}"
     nohup rlwrap q init/init.q -service $SERVICE -heartbeat 1 -p $PORT </dev/null > ${LOG_DIR}/${SERVICE}.log 2>&1 &
@@ -68,12 +68,12 @@ docker-compose up -d
 #Get private IP
 private_ip=$(ifconfig | grep "inet " | grep -v 127.0.0.1 | awk '{print $2}' | head -n 1)
 echo -e ""
-echo -e "${GREEN}Please connect to the web UI on: ${BLUE}localhost:10000${NC}"
-echo -e "${GREEN}When inside the UI, please connect to the discovery service using the the following handle: ${BLUE}${private_ip}:9090${NC}"
+echo -e "${GREEN}Please connect to the web UI on: ${BLUE}localhost:8080${NC}"
+echo -e "${GREEN}When inside the UI, please connect to the discovery service using the the following handle: ${BLUE}localhost:9090${NC}"
 echo -e ""
 
 # Reset the port number to 8000
-PORT=8000
+PORT=9090
 
 # Loop through the array and print out each item
 for SERVICE in "${array[@]}"; do
