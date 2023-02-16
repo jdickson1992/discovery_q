@@ -1,7 +1,10 @@
- 🔎 A discovery service using a pub/sub model designed in `kdb+`.
+# Service Discovery🕵️‍♂️
+A discovery service using a pub/sub model designed in `kdb+`  🔎 
+
+If you're interested, head over to https://jdickson.dev/posts/discovery/discovery_service/ 🙏
  
  
-# Getting started 🚀
+## Getting started 🚀
 
 To get started, just run:
 
@@ -45,10 +48,8 @@ For e.g.
 <img width="1599" alt="Screenshot 2023-02-06 at 17 11 36" src="https://user-images.githubusercontent.com/47530786/217038398-73c292ba-9a68-48a6-a2b8-139f6bad9fca.png">
 
 
----
 
-
-# Dashboard 📊
+## Dashboard 📊
 
 If all services are **healthly**, all entries in the dashboard should be green 🟩:
 
@@ -64,7 +65,19 @@ If **after 90s**, the discovery service hasn't received a heartbeat, it will cha
 https://user-images.githubusercontent.com/47530786/217040259-e03b0fe6-a0ff-4b4e-bf48-df1c35a58353.mov
 
 
-# Caveats ⚠️
+## Caveats ⚠️
 
 1. Please check that `rlwrap` and `q` are installed and *findable* in your bash profile.
   - If not, then you will have to modify lines [57](https://github.com/jdickson1992/discovery_q/blob/87c8f010c4dd6222d6b2c288fbc3239846c5bf44/start.sh#L57) and [60](https://github.com/jdickson1992/discovery_q/blob/87c8f010c4dd6222d6b2c288fbc3239846c5bf44/start.sh#L60) of `start.sh`
+
+## Finished 🔚
+
+Please run:
+
+```bash
+# select a (all)
+$ ./kill.sh 
+$ docker-compose down
+```
+
+*Finito*
